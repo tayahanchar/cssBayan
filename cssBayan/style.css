@@ -9,7 +9,7 @@
 body {
   background-color: rgb(222, 243, 236);
   color: rgb(11, 125, 87);
-  transition: all 1s;
+  transition: all 0.1s;
 }
 
 .wrapper {
@@ -92,7 +92,7 @@ body {
   overflow: visible;
   width: 1em;
   height: 1em;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 @media (max-width: 320px) {
@@ -109,12 +109,30 @@ body {
     height: 0;
   }
 
+  .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
+    opacity: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    transition: 0.1s;
+  }
+
+  .list:hover .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
+    opacity: 1;
+    overflow: visible;
+    width: 1em;
+    height: 1em;
+    transition: 0.1s;
+  }
+
   .list:hover .button {
     opacity: 1;
     overflow: visible;
     width: 1em;
     height: 1em;
-    transition: 0.2s;
+    transition: 0.1s;
   }
 
   .item:hover > .bayan__img {
@@ -139,26 +157,22 @@ body {
     font-size: 1.3em;
   }
 
-  .button {
-    width: 1.5em;
-    height: 1.5em;
-  }
-
-  .input:checked + div > .button {
-    background-image: url(assets/cross-icon.png);
-    opacity: 1;
-    overflow: visible;
-    width: 1.5em;
-    height: 1.5em;
-    transition: 0.5s;
-  }
-
   .item__top {
     height: 1.5em;
   }
 
   .line {
     height: 0.05rem;
+  }
+
+  .button {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .input:checked + div > .button {
+    width: 1.5em;
+    height: 1.5em;
   }
 }
 
@@ -170,12 +184,21 @@ body {
     height: 0;
   }
 
+  .list:hover .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
+    opacity: 1;
+    overflow: visible;
+    width: 1.5em;
+    height: 1.5em;
+    transition: 0.1s;
+  }
+
   .list:hover .button {
     opacity: 1;
     overflow: visible;
     width: 1.5em;
     height: 1.5em;
-    transition: 0.2s;
+    transition: 0.1s;
   }
 }
 
@@ -201,11 +224,8 @@ body {
 
   .input:checked + div > .button {
     background-image: url(assets/cross-icon.png);
-    opacity: 1;
-    overflow: visible;
     width: 2em;
     height: 2em;
-    transition: 0.5s;
   }
 
   .item__top {
@@ -222,6 +242,15 @@ body {
   }
 
   .list:hover .button {
+    opacity: 1;
+    overflow: visible;
+    width: 2em;
+    height: 2em;
+    transition: 0.2s;
+  }
+
+  .list:hover .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
     opacity: 1;
     overflow: visible;
     width: 2em;
