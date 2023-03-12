@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+}
+
+body {
+  background-color: rgb(222, 243, 236);
+  color: rgb(11, 125, 87);
+  transition: all 0.1s;
+}
+
+.wrapper {
+  margin: 2em auto;
+  padding: 1em;
+  width: 80%;
+  background-color: white;
+}
+
+.list {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
+  color: black;
+}
+
+.item__title {
+  font-size: 0.75em;
+}
+
+.button {
+  background-image: url(assets/plus-icon.png);
+  background-size:contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  opacity: 1;
+  overflow: visible;
+  width: 1em;
+  height: 1em;
+}
+
+.item__top {
+  width: 100%;
+  height: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.line {
+  margin: 0.5em 0;
+  width: 100%;
+  height: 0.05rem;
+  background-color: rgb(11, 125, 87);
+}
+
+.bayan__img {
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  width: 0;
+  margin: 0;
+}
+
+.input {
+  appearance: none;
+}
+
+.input:checked + div + img {
+  opacity: 1;
+  overflow: visible;
+  margin: 0.5em 0;
+  width: 50%;
+}
+
+.input:checked + div > .button {
+  background-image: url(assets/cross-icon.png);
+  opacity: 1;
+  overflow: visible;
+  width: 1em;
+  height: 1em;
+  transition: 0.1s;
+}
+
+@media (max-width: 320px) {
+  .item__title {
+    font-size: 0.6em;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button {
+    opacity: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
+    opacity: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    transition: 0.1s;
+  }
+
+  .list:hover .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
+    opacity: 1;
+    overflow: visible;
+    width: 1em;
+    height: 1em;
+    transition: 0.1s;
+  }
+
+  .list:hover .button {
+    opacity: 1;
+    overflow: visible;
+    width: 1em;
+    height: 1em;
+    transition: 0.1s;
+  }
+
+  .item:hover > .bayan__img {
+    opacity: 1;
+    overflow: visible;
+    margin: 0.5em 0;
+    width: 50%;
+  }
+
+  .item:hover > .item__top > .button {
+    background-image: url(assets/cross-icon.png);
+  }
+}
+
+@media (min-width: 820px) {
+  .title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .item__title {
+    font-size: 1.3em;
+  }
+
+  .item__top {
+    height: 1.5em;
+  }
+
+  .line {
+    height: 0.05rem;
+  }
+
+  .button {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .input:checked + div > .button {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+@media (hover: hover)and (pointer: fine) and (min-width: 820px) {
+  .button {
+    opacity: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .list:hover .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
+    opacity: 1;
+    overflow: visible;
+    width: 1.5em;
+    height: 1.5em;
+    transition: 0.1s;
+  }
+
+  .list:hover .button {
+    opacity: 1;
+    overflow: visible;
+    width: 1.5em;
+    height: 1.5em;
+    transition: 0.1s;
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrapper {
+    margin: 3em auto;
+    padding: 2em;
+  }
+
+  .title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .item__title {
+    font-size: 2em;
+  }
+
+  .button {
+    width: 2em;
+    height: 2em;
+  }
+
+  .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
+    width: 2em;
+    height: 2em;
+  }
+
+  .item__top {
+    height: 2em;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 1920px) {
+  .button {
+    opacity: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .list:hover .button {
+    opacity: 1;
+    overflow: visible;
+    width: 2em;
+    height: 2em;
+    transition: 0.2s;
+  }
+
+  .list:hover .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
+    opacity: 1;
+    overflow: visible;
+    width: 2em;
+    height: 2em;
+    transition: 0.2s;
+  }
+}
