@@ -128,3 +128,53 @@ body {
     background-image: url(assets/cross-icon.png);
   }
 }
+
+@media (min-width: 820px) {
+  .title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .item__title {
+    font-size: 1.3em;
+  }
+
+  .button {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .input:checked + div > .button {
+    background-image: url(assets/cross-icon.png);
+    opacity: 1;
+    overflow: visible;
+    width: 1.5em;
+    height: 1.5em;
+    transition: 0.5s;
+  }
+
+  .item__top {
+    height: 1.5em;
+  }
+
+  .line {
+    height: 0.05rem;
+  }
+}
+
+@media (hover: hover)and (pointer: fine) and (min-width: 820px) {
+  .button {
+    opacity: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .list:hover .button {
+    opacity: 1;
+    overflow: visible;
+    width: 1.5em;
+    height: 1.5em;
+    transition: 0.2s;
+  }
+}
