@@ -79,6 +79,22 @@ body {
   appearance: none;
 }
 
+.input:checked + div + img {
+  opacity: 1;
+  overflow: visible;
+  margin: 0.5em 0;
+  width: 50%;
+}
+
+.input:checked + div > .button {
+  background-image: url(assets/cross-icon.png);
+  opacity: 1;
+  overflow: visible;
+  width: 1em;
+  height: 1em;
+  transition: 0.5s;
+}
+
 @media (max-width: 320px) {
   .item__title {
     font-size: 0.6em;
